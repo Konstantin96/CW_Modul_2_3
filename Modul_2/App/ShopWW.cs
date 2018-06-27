@@ -8,7 +8,10 @@ namespace Modul_2.App
 {
     public class ShopWW
     {
-        
+        public ShopWW()
+        {
+
+        }
         public ShopWW(string Address, string Phone)
         {
             this.Address = Address;
