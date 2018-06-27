@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Modul_2.App.Catalog">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>App\Catalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modul_2.App.Product">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAARAAAgAAAAgAAAAAEAAEAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>App\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modul_2.App.ShopWW">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>App\ShopWW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Modul_2.App.TypeSecurity" Collapsed="true">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAIAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\Product.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

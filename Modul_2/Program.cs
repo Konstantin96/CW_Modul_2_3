@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modul_2.App;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Modul_2
 {
-    class Program
+    public class Program
     {
+        //2 CLASS WORK
         static void Main(string[] args)
         {
             int nz;
@@ -30,14 +32,33 @@ namespace Modul_2
                     task6();
                 else if (nz == 7)
                     task7();
+                else if (nz == 8)
+                    task8();
+                else if (nz == 9)
+                {
+                    ShopWW shop = new ShopWW();
+                    shop.Address = "Биржана 42";
+                    shop.Phone = "8 702 599 59 48";
+                    Catalog catalog = new Catalog() { Name = "Смартфоны" };
+                    Product product = new Product();
+                    product.name = "Смартфон ASUS";
+                    product.ManuFacture = "ASUS";
+                    product.Price = 150000;
+                    product.TypeSecurity = TypeSecurity.Type1;
+                    catalog.Products.Add(product);
+                    shop.Catalogs.Add(catalog);
+                    shop.PrintCatalog();
+                    
+                }
+
                 else if (nz == 666)
                     Console.WriteLine("Bye");
                 else
                 {
                     Console.WriteLine("Такого задания нет!");
-                    Thread.Sleep(1000);
-                    Console.Clear();
                 }
+                Thread.Sleep(2000);
+                Console.Clear();
             } while (nz != 666);
         }
         static void task1()
@@ -178,16 +199,33 @@ c.	полусредний вес — до 69 кг.
               + "],'IsSuccess':true,'ErrorMessage':null,'BlockDateEnd':null}";
             str = str.Substring(str.IndexOf('[') + 1, str.IndexOf(']') - str.IndexOf('[') - 1);
             Console.Write("Введите номер детали: ");
+            string[][] info = new string[250][];
+            int k = 0;
             string numdetail = Console.ReadLine();
             string[] Data = str.TrimEnd('}').Split('}');
             for (int i = 0; i < Data.Length; i++)
             {
-                string[] Data2 = Data[i].Split(',');
-                Console.WriteLine(Data2[4].Trim('\'').Replace("':'",":"));
+                string[] Data2 = Data[i].Replace("{","").TrimStart(',').Replace(",{", "").Split(',');
+                for (int p = 0; p < Data2.Length; p++)
+                {
+                    var data3 = Data2[p].Replace("'", "").Split(':');
+                    info[k] = data3;
+                    k++;
+                }
             }
         
 
 
+        }
+
+        //3 CLASS WORK Modul_4
+        static void task8()
+        {
+            string str = string.Format("{0:yyyy.MM.dd}", DateTime.Now);
+            Console.WriteLine(str);
+            Console.WriteLine("{0:###.#}",1651461.456);
+            StringBuilder sb = new StringBuilder("Hi");
+            Console.WriteLine("Lenght string:{0:0}",sb.Length);
         }
     }
 }
